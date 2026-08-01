@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>NeoServices</title>
+<link rel="icon" href="logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+:root{
+	--bg:#050b17;
+	--panel:rgba(16,28,54,.72);
+	--panel-solid:#0f1b33;
+	--border:#1d2f58;
+	--border-bright:#2b4682;
+	--accent:#4f8cff;
+	--accent-2:#7ab2ff;
+	--cyan:#63d7ff;
+	--text:#e4edff;
+	--muted:#8da1cc;
+	--err:#ff6b6b;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+	background:
+		radial-gradient(900px 500px at 15% -10%, rgba(79,140,255,.14), transparent 60%),
+		radial-gradient(800px 500px at 90% 110%, rgba(99,215,255,.10), transparent 60%),
+		var(--bg);
+	color:var(--text);
+	font-family:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+	min-height:100vh;
+	display:flex;
+	flex-direction:column;
+}
+a{color:var(--accent-2);text-decoration:none}
+a:hover{color:var(--cyan)}
+::selection{background:rgba(79,140,255,.35)}
+
+.topbar{
+	position:sticky;top:0;z-index:10;
+	display:flex;align-items:center;justify-content:space-between;
+	padding:14px 24px;
+	background:rgba(5,11,23,.82);
+	backdrop-filter:blur(10px);
+	border-bottom:1px solid var(--border);
+}
+.brand{
+	display:flex;align-items:center;gap:10px;
+	font-weight:700;letter-spacing:.06em;font-size:15px;
+	color:#fff;
+}
+.brand .mark{
+	width:26px;height:26px;border-radius:6px;
+	background:#0b1428;
+	display:grid;place-items:center;font-size:13px;color:#04102b;
+	overflow:hidden;flex:none;
+}
+.brand .mark img{width:100%;height:100%;object-fit:contain;display:block}
+.brand small{color:var(--muted);font-weight:500;letter-spacing:.02em}
+.topbar nav{display:flex;align-items:center;gap:6px}
+.topbar nav a{
+	padding:7px 13px;border-radius:8px;font-size:13px;color:var(--muted);
+	transition:.15s;cursor:pointer;
+}
+.topbar nav a:hover{color:#fff;background:rgba(79,140,255,.12)}
+.topbar nav a.discord{
+	background:linear-gradient(135deg,#5865f2,#3d4fe0);
+	color:#fff;font-weight:600;
+}
+.topbar nav a.discord:hover{filter:brightness(1.1);color:#fff}
+
+main{flex:1;width:100%;max-width:1060px;margin:0 auto;padding:0 24px 64px}
+
+.hero{text-align:center;padding:46px 0 10px}
+.art{
+	margin:0 auto 22px;
+	font-family:"JetBrains Mono",Consolas,monospace;
+	font-size:clamp(4px,1.05vw,9px);
+	line-height:1.12;
+	user-select:none;
+	overflow:hidden;
+	background:linear-gradient(180deg,#a8ccff 0%,var(--accent-2) 40%,#3a76e6 80%,#2b4f9e 100%);
+	-webkit-background-clip:text;
+	background-clip:text;
+	color:transparent;
+	white-space:pre;
+	max-width:100%;
+}
+.tagline{color:var(--muted);font-size:14px;margin:0 0 20px}
+.tagline b{color:var(--accent-2);font-weight:600}
+.version{
+	display:inline-block;
+	font-family:"JetBrains Mono",Consolas,monospace;
+	font-size:13px;font-weight:500;
+	color:var(--accent-2);
+	background:rgba(79,140,255,.10);
+	border:1px solid var(--border-bright);
+	padding:7px 16px;border-radius:8px;
+}
+.version.err{color:var(--err);border-color:rgba(255,107,107,.4);background:rgba(255,107,107,.08)}
+
+.stats{
+	display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+	gap:12px;margin:36px 0 14px;
+}
+.stat{
+	background:var(--panel);
+	border:1px solid var(--border);
+	border-radius:12px;
+	padding:14px 16px;
+	backdrop-filter:blur(6px);
+}
+.stat span{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:8px}
+.stat b{font-size:13px;font-weight:500;color:#fff;word-break:break-all;line-height:1.6}
+.stat b a{font-family:inherit}
+
+.panel{
+	background:var(--panel-solid);
+	border:1px solid var(--border);
+	border-radius:14px;
+	overflow:hidden;
+	margin-top:22px;
+}
+.panel-head{
+	display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+	padding:10px 12px;
+	background:rgba(5,11,23,.5);
+	border-bottom:1px solid var(--border);
+}
+.tabs{display:flex;gap:4px}
+.tabs button{
+	appearance:none;cursor:pointer;
+	font:inherit;font-size:13px;font-weight:500;
+	padding:8px 14px;border-radius:8px;
+	background:transparent;border:none;color:var(--muted);
+	font-family:"JetBrains Mono",Consolas,monospace;
+	transition:.15s;
+}
+.tabs button:hover{color:#fff;background:rgba(79,140,255,.10)}
+.tabs button.active{background:rgba(79,140,255,.18);color:var(--accent-2);box-shadow:inset 0 0 0 1px var(--border-bright)}
+.actions{display:flex;gap:8px}
+.actions button,.actions a{
+	appearance:none;cursor:pointer;font:inherit;
+	font-size:12.5px;font-weight:600;
+	padding:7px 13px;border-radius:8px;
+	background:transparent;border:1px solid var(--border-bright);color:var(--accent-2);
+	transition:.15s;
+}
+.actions button:hover,.actions a:hover{background:rgba(79,140,255,.15);color:#fff}
+.code{
+	margin:0;padding:16px 18px;
+	font-family:"JetBrains Mono",Consolas,monospace;
+	font-size:12.5px;line-height:1.55;
+	color:#c9dcff;
+	white-space:pre;overflow:auto;
+	max-height:56vh;
+	background:
+		linear-gradient(rgba(13,24,48,.55),rgba(13,24,48,.55)),
+		repeating-linear-gradient(0deg,transparent 0 27px,rgba(79,140,255,.04) 27px 28px);
+	scrollbar-width:thin;scrollbar-color:#2b4682 transparent;
+}
+.code::-webkit-scrollbar{width:10px;height:10px}
+.code::-webkit-scrollbar-thumb{background:#2b4682;border-radius:6px}
+.code::-webkit-scrollbar-track{background:transparent}
+
+.modal-back{
+	position:fixed;inset:0;z-index:50;
+	background:rgba(3,8,16,.7);
+	backdrop-filter:blur(4px);
+	display:none;align-items:center;justify-content:center;
+	padding:20px;
+}
+.modal-back.open{display:flex}
+.modal{
+	background:var(--panel-solid);
+	border:1px solid var(--border-bright);
+	border-radius:16px;
+	padding:24px;
+	width:100%;max-width:520px;
+	max-height:86vh;overflow:auto;
+}
+.modal h3{margin:0 0 4px;font-size:16px;color:#fff}
+.modal .m-sub{color:var(--muted);font-size:12.5px;margin:0 0 18px}
+.file-card{
+	display:flex;align-items:center;justify-content:space-between;gap:12px;
+	padding:14px 16px;
+	border:1px solid var(--border);border-radius:10px;
+	margin-bottom:10px;
+	background:rgba(79,140,255,.05);
+}
+.file-card:last-child{margin-bottom:0}
+.file-card .f-name{font-family:"JetBrains Mono",Consolas,monospace;font-weight:600;color:#fff;font-size:14px}
+.file-card .f-desc{font-size:12px;color:var(--muted);margin-top:3px}
+.file-card a{
+	flex:none;font:inherit;font-size:12.5px;font-weight:600;
+	padding:8px 14px;border-radius:8px;
+	background:rgba(79,140,255,.16);border:1px solid var(--border-bright);color:var(--accent-2);
+	transition:.15s;
+}
+.file-card a:hover{background:rgba(79,140,255,.28);color:#fff}
+.modal-close{
+	display:block;margin:18px auto 0;cursor:pointer;font:inherit;
+	font-size:13px;font-weight:600;
+	padding:9px 22px;border-radius:8px;
+	background:transparent;border:1px solid var(--border-bright);color:var(--muted);
+}
+.modal-close:hover{color:#fff;background:rgba(79,140,255,.12)}
+
+.toast{
+	position:fixed;left:50%;top:74px;
+	transform:translate(-50%,-14px);
+	background:#0f1b33;
+	border:1px solid var(--border-bright);
+	color:#fff;
+	padding:12px 22px;border-radius:12px;
+	font-size:14px;font-family:"JetBrains Mono",Consolas,monospace;
+	opacity:0;pointer-events:none;
+	transition:opacity .2s,transform .2s;z-index:100;
+	box-shadow:0 12px 36px rgba(0,0,0,.55),0 0 0 1px rgba(79,140,255,.15);
+}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+footer{
+	border-top:1px solid var(--border);
+	background:rgba(5,11,23,.6);
+	padding:20px 24px 26px;
+	color:var(--muted);font-size:12.5px;line-height:1.8;
+	display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:space-between;
+	max-width:1060px;margin:0 auto;width:100%;
+}
+footer b{color:var(--text);font-weight:600}
+footer .vpath{font-family:"JetBrains Mono",Consolas,monospace;font-size:12px}
+</style>
+</head>
+<body>
+<header class="topbar">
+	<div class="brand">
+		<span class="mark" id="logo-slot">◆</span>
+		<span>NeoServices <small></small></span>
+	</div>
+	<nav>
+		<a href="#offsets">offsets</a>
+		<a id="files-btn">files</a>
+		<a class="discord" id="discord-link" href="https://discord.gg/2x7JfFVGnv" target="_blank" rel="noopener">discord</a>
+	</nav>
+</header>
+
+<main>
+	<section class="hero">
+		<pre class="art" id="art"> </pre>
+		<p class="tagline">live dump <b>·</b> free <b>·</b> always updated</p>
+		<div class="version" id="version">loading…</div>
+	</section>
+
+	<section class="stats" id="meta"></section>
+
+	<section class="panel" id="offsets">
+		<div class="panel-head">
+			<div class="tabs">
+				<button data-tab="hpp" class="active">offsets.hpp</button>
+				<button data-tab="h">Offsets.h</button>
+				<button data-tab="json">offsets.json</button>
+			</div>
+			<div class="actions">
+				<button id="copy" type="button">copy</button>
+				<a id="dl" download>download</a>
+			</div>
+		</div>
+		<pre class="code" id="code">loading offsets.hpp…</pre>
+	</section>
+</main>
+
+<footer>
+	<div>Made by<b> NeoServices</b></a></div>
+	<div class="vpath">version path: <a id="verlink" href="#">?</a></div>
+</footer>
+
+<div class="modal-back" id="modal">
+	<div class="modal">
+		<h3>files</h3>
+		<p class="m-sub">same offsets, three formats</p>
+		<div class="file-card">
+			<div>
+				<div class="f-name">offsets.hpp</div>
+				<div class="f-desc">C++ header — <code>namespace Offsets</code></div>
+			</div>
+			<a href="offsets.hpp" download>download</a>
+		</div>
+		<div class="file-card">
+			<div>
+				<div class="f-name">Offsets.h</div>
+				<div class="f-desc">identical content, .h extension</div>
+			</div>
+			<a href="Offsets.h" download>download</a>
+		</div>
+		<div class="file-card">
+			<div>
+				<div class="f-name">offsets.json</div>
+				<div class="f-desc">machine-readable metadata + offsets</div>
+			</div>
+			<a href="offsets.json" download>download</a>
+		</div>
+		<button class="modal-close" id="modal-close" type="button">close</button>
+	</div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+function esc(s){
+	return String(s).replace(/[&<>"']/g,function(c){
+		return ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[c];
+	});
+}
+
+var verEl=document.getElementById("version");
+var metaEl=document.getElementById("meta");
+var artEl=document.getElementById("art");
+var codeEl=document.getElementById("code");
+var tabs=document.querySelectorAll(".tabs button");
+var copyBtn=document.getElementById("copy");
+var dlBtn=document.getElementById("dl");
+var discLink=document.getElementById("discord-link");
+var verLink=document.getElementById("verlink");
+var modal=document.getElementById("modal");
+var filesBtn=document.getElementById("files-btn");
+var modalClose=document.getElementById("modal-close");
+var toastEl=document.getElementById("toast");
+var logoSlot=document.getElementById("logo-slot");
+
+var logoImg=new Image();
+logoImg.onload=function(){
+	logoSlot.textContent="";
+	logoSlot.appendChild(logoImg);
+};
+logoImg.onerror=function(){};
+logoImg.src="logo.png";
+
+var toastTimer=null;
+function showToast(msg){
+	toastEl.textContent=msg;
+	toastEl.classList.remove("show");
+	void toastEl.offsetWidth;
+	toastEl.classList.add("show");
+	clearTimeout(toastTimer);
+	toastTimer=setTimeout(function(){toastEl.classList.remove("show");},2200);
+}
+
+var DATA={hpp:"",h:"",json:""};
+var NAMES={hpp:"offsets.hpp",h:"Offsets.h",json:"offsets.json"};
+var CUR="hpp";
+
+function showTab(t){
+	CUR=t;
+	for(var i=0;i<tabs.length;i++){
+		var on=tabs[i].getAttribute("data-tab")===t;
+		tabs[i].classList.toggle("active",on);
+	}
+	codeEl.textContent=DATA[t];
+}
+
+function doCopy(){
+	showToast("copied "+NAMES[CUR]);
+	try{
+		navigator.clipboard.writeText(DATA[CUR]||"");
+	}catch(e){}
+}
+
+function doDownload(){
+	var blob=new Blob([DATA[CUR]||""],{type:"text/plain"});
+	var url=URL.createObjectURL(blob);
+	var a=document.createElement("a");
+	a.href=url;a.download=NAMES[CUR];
+	document.body.appendChild(a);
+	a.click();
+	document.body.removeChild(a);
+	URL.revokeObjectURL(url);
+}
+
+copyBtn.onclick=doCopy;
+dlBtn.onclick=doDownload;
+for(var i=0;i<tabs.length;i++){
+	tabs[i].onclick=function(){showTab(this.getAttribute("data-tab"));};
+}
+
+filesBtn.onclick=function(){modal.classList.add("open");};
+modalClose.onclick=function(){modal.classList.remove("open");};
+modal.onclick=function(e){if(e.target===modal)modal.classList.remove("open");};
+
+function statCard(k,inner){
+	return "<div class=\"stat\"><span>"+esc(k)+"</span><b>"+inner+"</b></div>";
+}
+
+async function load(){
+	try{
+		fetch("art.txt",{cache:"no-store"}).then(function(r){return r.ok?r.text():"";}).then(function(t){
+			if(t) artEl.textContent=t;
+		}).catch(function(){});
+
+		var r=await fetch("offsets.json",{cache:"no-store"});
+		if(!r.ok) throw new Error("offsets.json "+r.status);
+		var j=await r.json();
+		var ver=j["Roblox Version"]||"?";
+		var theo="https://offsets.imtheo.lol";
+		var disc=j["Discord"]||"https://discord.gg/2x7JfFVGnv";
+		if(discLink) discLink.href=disc;
+
+		verEl.textContent=ver;
+
+		metaEl.innerHTML=
+			statCard("Roblox Version",esc(ver))+
+			statCard("Dumped At",esc(j["Dumped At"]||"?"))+
+			statCard("Total Offsets",esc(j["Total Offsets"]!=null?String(j["Total Offsets"]):"?"));
+
+		verLink.href=esc(ver)+"/offsets.hpp";
+		verLink.textContent=esc(ver)+"/";
+
+		var hp=await fetch("offsets.hpp",{cache:"no-store"});
+		DATA.hpp=await hp.text();
+		var hf=await fetch("Offsets.h",{cache:"no-store"});
+		DATA.h=await hf.text();
+		DATA.json=JSON.stringify(j,null,2);
+		showTab("hpp");
+	}catch(e){
+		verEl.classList.add("err");
+		verEl.textContent="error: "+e;
+		codeEl.textContent="failed to load offsets.hpp";
+	}
+}
+load();
+</script>
+</body>
+</html>
