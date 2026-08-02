@@ -3,7 +3,7 @@
   "Roblox Version": "version-145f189a6a974303",
   "Dumper Version": "1.0",
   "Dumped With": "NeoServices live_dump",
-  "Dumped At": "13:10 08/01/2026",
+  "Dumped At": "21:50 08/01/2026",
   "Discord": "https://discord.gg/2x7JfFVGnv",
   "Credits": "Base offsets from theo — https://offsets.imtheo.lol (merged; custom dump on top)",
   "Theo": "https://offsets.imtheo.lol",
@@ -302,7 +302,7 @@
       "HumanoidStateID": 32,
       "FloorMaterial": 388,
       "TargetPoint": 332,
-      "PlatformStatePointer": 1746706288
+      "PlatformStatePointer": 1195063610
     },
     "Seat": {
       "Occupant": 432
