@@ -5,7 +5,7 @@
 /* -------------------------------------------------------------
 /*  Roblox Version : version-145f189a6a974303
 /*  Dumped By : NeoServices
-/*  Dumped At : 04:46 08/03/2026
+/*  Dumped At : 05:13 08/03/2026
 /* =============================================================
 */
 
@@ -747,7 +747,7 @@ namespace Offsets {
     }
 
     namespace WorldRoot {
-         inline constexpr uintptr_t RaycastBoundDesc = 0x5f9ba78;
+         inline constexpr uintptr_t RaycastBoundDesc = 0x8091390;
          inline constexpr uintptr_t RaycastBoundFn = 0x80;
     }
 
