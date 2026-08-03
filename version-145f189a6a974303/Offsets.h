@@ -5,7 +5,7 @@
 /* -------------------------------------------------------------
 /*  Roblox Version : version-145f189a6a974303
 /*  Dumped By : NeoServices
-/*  Dumped At : 05:17 08/03/2026
+/*  Dumped At : 14:06 08/03/2026
 /* =============================================================
 */
 
@@ -337,7 +337,7 @@ namespace Offsets {
          inline constexpr uintptr_t HumanoidStateID = 0x20;
          inline constexpr uintptr_t FloorMaterial = 0x184;
          inline constexpr uintptr_t TargetPoint = 0x14c;
-         inline constexpr uintptr_t PlatformStatePointer = 0x681ca1c8;
+         inline constexpr uintptr_t PlatformStatePointer = 0x473b393a;
     }
 
     namespace Seat {
