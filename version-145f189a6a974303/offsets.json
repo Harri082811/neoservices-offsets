@@ -3,11 +3,11 @@
   "Roblox Version": "version-145f189a6a974303",
   "Dumper Version": "1.0",
   "Dumped With": "NeoServices live_dump",
-  "Dumped At": "04:20 08/03/2026",
+  "Dumped At": "04:46 08/03/2026",
   "Discord": "https://discord.gg/2x7JfFVGnv",
   "Credits": "Base offsets from theo — https://offsets.imtheo.lol (merged; custom dump on top)",
   "Theo": "https://offsets.imtheo.lol",
-  "Total Offsets": 506,
+  "Total Offsets": 507,
   "Offsets": {
     "PlayerConfigurer": {
       "Pointer": 0
@@ -665,11 +665,14 @@
       "Water": 6
     },
     "WorldRoot": {
-      "RaycastBoundDesc": 134812560,
+      "RaycastBoundDesc": 100252280,
       "RaycastBoundFn": 128
     },
     "functions": {
       "raycast": 18975680
+    },
+    "FastCluster": {
+      "VTableRva": 99844552
     }
   }
 }
