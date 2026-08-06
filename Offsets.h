@@ -5,7 +5,7 @@
 /* -------------------------------------------------------------
 /*  Roblox Version : version-d584fb6c717a43d9
 /*  Dumped By : NeoServices
-/*  Dumped At : 19:03 08/06/2026
+/*  Dumped At : 19:12 08/06/2026
 /* =============================================================
 */
 
@@ -107,7 +107,7 @@ namespace Offsets {
     }
 
     namespace MeshContentProvider {
-         inline constexpr uintptr_t Cache = 0xf0;
+         inline constexpr uintptr_t Cache = 0xd8;
          inline constexpr uintptr_t LRUCache = 0x20;
          inline constexpr uintptr_t MeshData = 0x40;
          inline constexpr uintptr_t ToMeshData = 0x40;
@@ -131,15 +131,15 @@ namespace Offsets {
          inline constexpr uintptr_t ScriptContext = 0x440;
          inline constexpr uintptr_t PlaceVersion = 0x1ac;
          inline constexpr uintptr_t ServerIP = 0x560;
-         inline constexpr uintptr_t ToRenderView1 = 0x1c8;
+         inline constexpr uintptr_t ToRenderView1 = 0x100;
          inline constexpr uintptr_t ToRenderView2 = 0x8;
-         inline constexpr uintptr_t ToRenderView3 = 0x28;
+         inline constexpr uintptr_t ToRenderView3 = 0x8;
          inline constexpr uintptr_t PrimitiveCount = 0x3c0;
     }
 
     namespace RunService {
-         inline constexpr uintptr_t HeartbeatTask = 0x6b8;
-         inline constexpr uintptr_t HeartbeatFPS = 0xf4;
+         inline constexpr uintptr_t HeartbeatTask = 0x2a0;
+         inline constexpr uintptr_t HeartbeatFPS = 0xec;
     }
 
     namespace RenderJob {
@@ -214,7 +214,7 @@ namespace Offsets {
     }
 
     namespace SpawnLocation {
-         inline constexpr uintptr_t AllowTeamChangeOnTouch = 0x3d;
+         inline constexpr uintptr_t AllowTeamChangeOnTouch = 0x188;
          inline constexpr uintptr_t Enabled = 0x189;
          inline constexpr uintptr_t Neutral = 0x18a;
          inline constexpr uintptr_t ForcefieldDuration = 0x180;
@@ -326,7 +326,7 @@ namespace Offsets {
          inline constexpr uintptr_t HumanoidStateID = 0x20;
          inline constexpr uintptr_t FloorMaterial = 0x184;
          inline constexpr uintptr_t TargetPoint = 0x14c;
-         inline constexpr uintptr_t PlatformStatePointer = 0x473b393a;
+         inline constexpr uintptr_t PlatformStatePointer = 0x0;
     }
 
     namespace Seat {
@@ -349,9 +349,9 @@ namespace Offsets {
          inline constexpr uintptr_t Tooltip = 0x468;
          inline constexpr uintptr_t TextureId = 0x360;
          inline constexpr uintptr_t Grip = 0x4ac;
-         inline constexpr uintptr_t Enabled = 0x345;
+         inline constexpr uintptr_t Enabled = 0x4b9;
          inline constexpr uintptr_t CanBeDropped = 0x4b8;
-         inline constexpr uintptr_t ManualActivationOnly = 0x295;
+         inline constexpr uintptr_t ManualActivationOnly = 0x4ba;
          inline constexpr uintptr_t RequiresHandle = 0x4bb;
     }
 
@@ -381,7 +381,7 @@ namespace Offsets {
     namespace BasePart {
          inline constexpr uintptr_t Primitive = 0x128;
          inline constexpr uintptr_t Transparency = 0xd0;
-         inline constexpr uintptr_t Color3 = 0xf4;
+         inline constexpr uintptr_t Color3 = 0x148;
          inline constexpr uintptr_t Shape = 0x159;
          inline constexpr uintptr_t Massless = 0xd7;
          inline constexpr uintptr_t CastShadow = 0xd5;
@@ -504,7 +504,7 @@ namespace Offsets {
          inline constexpr uintptr_t GradientTop = 0x150;
          inline constexpr uintptr_t LightDirection = 0x168;
          inline constexpr uintptr_t GradientBottom = 0x190;
-         inline constexpr uintptr_t GlobalShadows = 0x144;
+         inline constexpr uintptr_t GlobalShadows = 0x138;
          inline constexpr uintptr_t MoonPosition = 0x184;
          inline constexpr uintptr_t SunPosition = 0x178;
          inline constexpr uintptr_t Source = 0x174;
@@ -687,6 +687,26 @@ namespace Offsets {
          inline constexpr uintptr_t TypeTag = 0x0;
     }
 
+    namespace Luau {
+         inline constexpr uintptr_t collectgarbage_wrap = 0x24184a0;
+         inline constexpr uintptr_t index2addr = 0x937da0;
+         inline constexpr uintptr_t loadstring = 0x24165d0;
+         inline constexpr uintptr_t lua_gc = 0x93a040;
+         inline constexpr uintptr_t lua_getglobal = 0x0;
+         inline constexpr uintptr_t lua_pushinteger = 0x938e80;
+         inline constexpr uintptr_t lua_pushlightuserdata = 0x939140;
+         inline constexpr uintptr_t lua_pushnil = 0x9392c0;
+         inline constexpr uintptr_t lua_pushobject = 0x938ef0;
+         inline constexpr uintptr_t lua_pushvalue = 0x937d30;
+         inline constexpr uintptr_t luaC_fullgc = 0x94c250;
+         inline constexpr uintptr_t luaC_step = 0x94bec0;
+         inline constexpr uintptr_t luaC_step_work = 0x94bbf0;
+         inline constexpr uintptr_t luaL_getmetafield = 0x93da80;
+         inline constexpr uintptr_t print_wrap = 0x79a9a0;
+         inline constexpr uintptr_t require = 0x2418720;
+         inline constexpr uintptr_t require_impl = 0x0;
+    }
+
     namespace LuauGlobal {
          inline constexpr uintptr_t currentwhite = 0x10;
          inline constexpr uintptr_t dummynode = 0x610b760;
@@ -754,26 +774,6 @@ namespace Offsets {
     namespace TechniqueArray {
          inline constexpr uintptr_t BeginOffset = 0x0;
          inline constexpr uintptr_t EndOffset = 0x8;
-    }
-
-    namespace Luau {
-         inline constexpr uintptr_t collectgarbage_wrap = 0x24184a0;
-         inline constexpr uintptr_t index2addr = 0x937da0;
-         inline constexpr uintptr_t loadstring = 0x24165d0;
-         inline constexpr uintptr_t lua_gc = 0x93a040;
-         inline constexpr uintptr_t lua_getglobal = 0x0;
-         inline constexpr uintptr_t lua_pushinteger = 0x938e80;
-         inline constexpr uintptr_t lua_pushlightuserdata = 0x939140;
-         inline constexpr uintptr_t lua_pushnil = 0x9392c0;
-         inline constexpr uintptr_t lua_pushobject = 0x938ef0;
-         inline constexpr uintptr_t lua_pushvalue = 0x937d30;
-         inline constexpr uintptr_t luaC_fullgc = 0x94c250;
-         inline constexpr uintptr_t luaC_step = 0x94bec0;
-         inline constexpr uintptr_t luaC_step_work = 0x94bbf0;
-         inline constexpr uintptr_t luaL_getmetafield = 0x93da80;
-         inline constexpr uintptr_t print_wrap = 0x79a9a0;
-         inline constexpr uintptr_t require = 0x2418720;
-         inline constexpr uintptr_t require_impl = 0x0;
     }
 
 }

@@ -3,7 +3,7 @@
   "Roblox Version": "version-d584fb6c717a43d9",
   "Dumper Version": "1.0",
   "Dumped With": "NeoServices live_dump",
-  "Dumped At": "19:03 08/06/2026",
+  "Dumped At": "19:12 08/06/2026",
   "Discord": "https://discord.gg/2x7JfFVGnv",
   "Credits": "Base offsets from theo — https://offsets.imtheo.lol (merged; custom dump on top)",
   "Theo": "https://offsets.imtheo.lol",
@@ -91,7 +91,7 @@
       "AnimationId": 192
     },
     "MeshContentProvider": {
-      "Cache": 240,
+      "Cache": 216,
       "LRUCache": 32,
       "MeshData": 64,
       "ToMeshData": 64,
@@ -113,14 +113,14 @@
       "ScriptContext": 1088,
       "PlaceVersion": 428,
       "ServerIP": 1376,
-      "ToRenderView1": 456,
+      "ToRenderView1": 256,
       "ToRenderView2": 8,
-      "ToRenderView3": 40,
+      "ToRenderView3": 8,
       "PrimitiveCount": 960
     },
     "RunService": {
-      "HeartbeatTask": 1720,
-      "HeartbeatFPS": 244
+      "HeartbeatTask": 672,
+      "HeartbeatFPS": 236
     },
     "RenderJob": {
       "RenderView": 464,
@@ -187,7 +187,7 @@
       "Looped": 317
     },
     "SpawnLocation": {
-      "AllowTeamChangeOnTouch": 61,
+      "AllowTeamChangeOnTouch": 392,
       "Enabled": 393,
       "Neutral": 394,
       "ForcefieldDuration": 384,
@@ -293,7 +293,7 @@
       "HumanoidStateID": 32,
       "FloorMaterial": 388,
       "TargetPoint": 332,
-      "PlatformStatePointer": 1195063610
+      "PlatformStatePointer": 0
     },
     "Seat": {
       "Occupant": 432
@@ -312,9 +312,9 @@
       "Tooltip": 1128,
       "TextureId": 864,
       "Grip": 1196,
-      "Enabled": 837,
+      "Enabled": 1209,
       "CanBeDropped": 1208,
-      "ManualActivationOnly": 661,
+      "ManualActivationOnly": 1210,
       "RequiresHandle": 1211
     },
     "Clothing": {
@@ -340,7 +340,7 @@
     "BasePart": {
       "Primitive": 296,
       "Transparency": 208,
-      "Color3": 244,
+      "Color3": 328,
       "Shape": 345,
       "Massless": 215,
       "CastShadow": 213,
@@ -447,7 +447,7 @@
       "GradientTop": 336,
       "LightDirection": 360,
       "GradientBottom": 400,
-      "GlobalShadows": 324,
+      "GlobalShadows": 312,
       "MoonPosition": 388,
       "SunPosition": 376,
       "Source": 372,
@@ -605,6 +605,25 @@
       "Top": 72,
       "TypeTag": 0
     },
+    "Luau": {
+      "collectgarbage_wrap": 37848224,
+      "index2addr": 9665952,
+      "loadstring": 37840336,
+      "lua_gc": 9674816,
+      "lua_getglobal": 0,
+      "lua_pushinteger": 9670272,
+      "lua_pushlightuserdata": 9670976,
+      "lua_pushnil": 9671360,
+      "lua_pushobject": 9670384,
+      "lua_pushvalue": 9665840,
+      "luaC_fullgc": 9749072,
+      "luaC_step": 9748160,
+      "luaC_step_work": 9747440,
+      "luaL_getmetafield": 9689728,
+      "print_wrap": 7973280,
+      "require": 37848864,
+      "require_impl": 0
+    },
     "LuauGlobal": {
       "currentwhite": 16,
       "dummynode": 101758816,
@@ -668,25 +687,6 @@
     "TechniqueArray": {
       "BeginOffset": 0,
       "EndOffset": 8
-    },
-    "Luau": {
-      "collectgarbage_wrap": 37848224,
-      "index2addr": 9665952,
-      "loadstring": 37840336,
-      "lua_gc": 9674816,
-      "lua_getglobal": 0,
-      "lua_pushinteger": 9670272,
-      "lua_pushlightuserdata": 9670976,
-      "lua_pushnil": 9671360,
-      "lua_pushobject": 9670384,
-      "lua_pushvalue": 9665840,
-      "luaC_fullgc": 9749072,
-      "luaC_step": 9748160,
-      "luaC_step_work": 9747440,
-      "luaL_getmetafield": 9689728,
-      "print_wrap": 7973280,
-      "require": 37848864,
-      "require_impl": 0
     }
   }
 }
