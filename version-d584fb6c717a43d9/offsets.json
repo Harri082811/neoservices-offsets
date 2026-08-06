@@ -3,11 +3,11 @@
   "Roblox Version": "version-d584fb6c717a43d9",
   "Dumper Version": "1.0",
   "Dumped With": "NeoServices live_dump",
-  "Dumped At": "16:32 08/06/2026",
+  "Dumped At": "18:58 08/06/2026",
   "Discord": "https://discord.gg/2x7JfFVGnv",
   "Credits": "Base offsets from theo — https://offsets.imtheo.lol (merged; custom dump on top)",
   "Theo": "https://offsets.imtheo.lol",
-  "Total Offsets": 393,
+  "Total Offsets": 515,
   "Offsets": {
     "PlayerConfigurer": {
       "Pointer": 0
@@ -37,7 +37,14 @@
       "MousePosition": 212
     },
     "ScriptContext": {
-      "RequireBypass": 0
+      "RequireBypass": 0,
+      "LuaState": 40,
+      "LuaState2": 40,
+      "LuaStateAlt": 232,
+      "VmEncryptedLuaState": 208,
+      "VmWrapper": 544,
+      "VmWrapper2": 1320,
+      "VmWrapperBig": 1088
     },
     "ModuleScript": {
       "IsCoreScript": 0,
@@ -60,7 +67,22 @@
       "Parent": 104,
       "ClassDescriptor": 24,
       "ClassName": 8,
-      "ClassBase": 432
+      "ClassBase": 432,
+      "ComponentMap": 56,
+      "AttributeContainer": 72,
+      "AttributeList": 24,
+      "AttributeToNext": 88,
+      "AttributeToValue": 24,
+      "ClassByName": 14049216,
+      "Creator_create": 0,
+      "Creator_isCreatable": 16,
+      "CreatorFromClass": 9357744,
+      "FromExisting": 36886480,
+      "New": 36882960,
+      "PushToLua": 8149024,
+      "SetParent": 9137520,
+      "WhJobNopSlot": 16,
+      "WhJobVftable": 110618440
     },
     "Misc": {
       "StringLength": 0,
@@ -334,7 +356,9 @@
       "Flags": 438,
       "Material": 0,
       "AssemblyLinearVelocity": 248,
-      "AssemblyAngularVelocity": 260
+      "AssemblyAngularVelocity": 260,
+      "Properties": 160,
+      "PropertyPosition": 144
     },
     "PrimitiveFlags": {
       "Anchored": 2,
@@ -352,7 +376,8 @@
     },
     "SpecialMesh": {
       "Scale": 196,
-      "MeshId": 248
+      "MeshId": 248,
+      "Offset": 184
     },
     "Attachment": {
       "Position": 196
@@ -541,8 +566,127 @@
     "FastCluster": {
       "VTableRva": 109894232
     },
-    "functions": {
-      "raycast": 18975680
+    "Alloc": {
+      "Free": 24709008,
+      "Malloc": 7968256
+    },
+    "Attribute": {
+      "Key": 0,
+      "Size": 88,
+      "TypeIdRva": 140972348,
+      "Value": 8
+    },
+    "AttributesMap": {
+      "Attributes": 16,
+      "Length": 0
+    },
+    "Chat": {
+      "IsFocused": 340
+    },
+    "FastClusterEntity": {
+      "AlphaByte": 20,
+      "BBoxMaxX": 164,
+      "BBoxMaxY": 168,
+      "BBoxMaxZ": 172,
+      "BBoxMinX": 152,
+      "BBoxMinY": 156,
+      "BBoxMinZ": 160,
+      "ContextPtr": 8,
+      "DecalMaterialPtr": 72,
+      "MaterialPtr": 32,
+      "PrimitiveIndexArrayPtr": 128,
+      "RenderQueueId": 16,
+      "TechniqueArrayPtr": 112,
+      "VTableRva": 109894232
+    },
+    "LuaState": {
+      "Base": 96,
+      "Global": 112,
+      "Top": 72,
+      "TypeTag": 0
+    },
+    "Luau": {
+      "collectgarbage_wrap": 37848224,
+      "index2addr": 9665952,
+      "loadstring": 37840336,
+      "lua_gc": 9674816,
+      "lua_getglobal": 0,
+      "lua_pushinteger": 9670272,
+      "lua_pushlightuserdata": 9670976,
+      "lua_pushnil": 9671360,
+      "lua_pushobject": 9670384,
+      "lua_pushvalue": 9665840,
+      "luaC_fullgc": 9749072,
+      "luaC_step": 9748160,
+      "luaC_step_work": 9747440,
+      "luaL_getmetafield": 9689728,
+      "print_wrap": 7973280,
+      "require": 37848864,
+      "require_impl": 0
+    },
+    "LuauGlobal": {
+      "currentwhite": 16,
+      "dummynode": 101758816,
+      "gcopages": 144,
+      "gcopages_end": 120,
+      "gcopages_large": 160,
+      "gcopages_sizeclass": 168,
+      "gcpause": 24,
+      "gcstate": 17,
+      "gcstepmul": 20,
+      "gcstepsize": 16,
+      "GCthreshold": 80,
+      "gray": 40,
+      "grayagain": 48,
+      "page_next_all": 8,
+      "page_next_free": 24,
+      "strt_hash": 64,
+      "strt_size": 56,
+      "totalbytes": 88,
+      "weak": 32
+    },
+    "MaterialLayer": {
+      "ColorData": 36,
+      "FillModeByte": 17,
+      "Flags2": 32,
+      "MatFlags": 24,
+      "Param": 28,
+      "Stride": 136
+    },
+    "Reflection": {
+      "ClassDescCreatable": 16,
+      "ClassDescFlags": 444,
+      "CreatorTable": 141101912,
+      "EntryValue": 8,
+      "NameRegistry": 137822424,
+      "NameTable": 80,
+      "TableEmpty": 32,
+      "TableEnd": 8,
+      "TableStart": 0,
+      "TableStride": 16
+    },
+    "RenderQueue": {
+      "AlwaysOnTop": 13,
+      "AlwaysOnTopAdorns": 14,
+      "Decals": 2,
+      "Glass": 8,
+      "GlassTint": 7,
+      "OnTopReadOnlyDepth": 12,
+      "OnTopWithDepth": 11,
+      "Opaque": 0,
+      "OpaqueAdorns": 4,
+      "OpaqueCasters": 3,
+      "OpaqueWithAlpha": 5,
+      "Screen": 15,
+      "ScreenOnTopOfBlur": 16,
+      "Terrain": 1,
+      "Transparent": 9,
+      "TransparentCasters": 10,
+      "Water": 6
+    },
+    "TechniqueArray": {
+      "BeginOffset": 0,
+      "EndOffset": 8
     }
   }
 }
