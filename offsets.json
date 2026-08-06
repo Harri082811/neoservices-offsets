@@ -3,7 +3,7 @@
   "Roblox Version": "version-d584fb6c717a43d9",
   "Dumper Version": "1.0",
   "Dumped With": "NeoServices live_dump",
-  "Dumped At": "20:14 08/05/2026",
+  "Dumped At": "16:13 08/06/2026",
   "Discord": "https://discord.gg/2x7JfFVGnv",
   "Credits": "Base offsets from theo — https://offsets.imtheo.lol (merged; custom dump on top)",
   "Theo": "https://offsets.imtheo.lol",
@@ -539,7 +539,7 @@
       "RaycastBoundFn": 128
     },
     "FastCluster": {
-      "VTableRva": 99844552
+      "VTableRva": 109894232
     },
     "functions": {
       "raycast": 18975680

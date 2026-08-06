@@ -5,7 +5,7 @@
 /* -------------------------------------------------------------
 /*  Roblox Version : version-d584fb6c717a43d9
 /*  Dumped By : NeoServices
-/*  Dumped At : 20:14 08/05/2026
+/*  Dumped At : 16:13 08/06/2026
 /* =============================================================
 */
 
@@ -614,7 +614,7 @@ namespace Offsets {
     }
 
     namespace FastCluster {
-         inline constexpr uintptr_t VTableRva = 0x5f381c8;
+         inline constexpr uintptr_t VTableRva = 0x68cda58;
     }
 
     namespace functions {
