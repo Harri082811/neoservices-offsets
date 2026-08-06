@@ -5,7 +5,7 @@
 /* -------------------------------------------------------------
 /*  Roblox Version : version-d584fb6c717a43d9
 /*  Dumped By : NeoServices
-/*  Dumped At : 19:12 08/06/2026
+/*  Dumped At : 19:14 08/06/2026
 /* =============================================================
 */
 
@@ -687,26 +687,6 @@ namespace Offsets {
          inline constexpr uintptr_t TypeTag = 0x0;
     }
 
-    namespace Luau {
-         inline constexpr uintptr_t collectgarbage_wrap = 0x24184a0;
-         inline constexpr uintptr_t index2addr = 0x937da0;
-         inline constexpr uintptr_t loadstring = 0x24165d0;
-         inline constexpr uintptr_t lua_gc = 0x93a040;
-         inline constexpr uintptr_t lua_getglobal = 0x0;
-         inline constexpr uintptr_t lua_pushinteger = 0x938e80;
-         inline constexpr uintptr_t lua_pushlightuserdata = 0x939140;
-         inline constexpr uintptr_t lua_pushnil = 0x9392c0;
-         inline constexpr uintptr_t lua_pushobject = 0x938ef0;
-         inline constexpr uintptr_t lua_pushvalue = 0x937d30;
-         inline constexpr uintptr_t luaC_fullgc = 0x94c250;
-         inline constexpr uintptr_t luaC_step = 0x94bec0;
-         inline constexpr uintptr_t luaC_step_work = 0x94bbf0;
-         inline constexpr uintptr_t luaL_getmetafield = 0x93da80;
-         inline constexpr uintptr_t print_wrap = 0x79a9a0;
-         inline constexpr uintptr_t require = 0x2418720;
-         inline constexpr uintptr_t require_impl = 0x0;
-    }
-
     namespace LuauGlobal {
          inline constexpr uintptr_t currentwhite = 0x10;
          inline constexpr uintptr_t dummynode = 0x610b760;
@@ -774,6 +754,26 @@ namespace Offsets {
     namespace TechniqueArray {
          inline constexpr uintptr_t BeginOffset = 0x0;
          inline constexpr uintptr_t EndOffset = 0x8;
+    }
+
+    namespace Luau {
+         inline constexpr uintptr_t collectgarbage_wrap = 0x24184a0;
+         inline constexpr uintptr_t index2addr = 0x937da0;
+         inline constexpr uintptr_t loadstring = 0x24165d0;
+         inline constexpr uintptr_t lua_gc = 0x93a040;
+         inline constexpr uintptr_t lua_getglobal = 0x0;
+         inline constexpr uintptr_t lua_pushinteger = 0x938e80;
+         inline constexpr uintptr_t lua_pushlightuserdata = 0x939140;
+         inline constexpr uintptr_t lua_pushnil = 0x9392c0;
+         inline constexpr uintptr_t lua_pushobject = 0x938ef0;
+         inline constexpr uintptr_t lua_pushvalue = 0x937d30;
+         inline constexpr uintptr_t luaC_fullgc = 0x94c250;
+         inline constexpr uintptr_t luaC_step = 0x94bec0;
+         inline constexpr uintptr_t luaC_step_work = 0x94bbf0;
+         inline constexpr uintptr_t luaL_getmetafield = 0x93da80;
+         inline constexpr uintptr_t print_wrap = 0x79a9a0;
+         inline constexpr uintptr_t require = 0x2418720;
+         inline constexpr uintptr_t require_impl = 0x0;
     }
 
 }
